@@ -22,7 +22,7 @@ document.getElementById('buchungsformular').addEventListener('submit', function(
     fetch('https://api.airtable.com/v0/YOUR_BASE_ID/Anfragen', {
         method: 'POST',
         headers: {
-            'Authorization': 'Bearer YOUR_API_KEY',
+            'Authorization': 'pataLQThLzkfWDqqk.6f4f75caa52f80c0cc22589c5fe35de68f55a91478867fd7a4a710b578b1a957',
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(data)
