@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>KI-gestützte Workflow-Automatisierung</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Externe CSS-Datei -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Optimieren Sie Ihre Prozesse mit KI</h1>
+        <p>Erstellen Sie individuelle Workflows für Social Media, Lead-Generierung und mehr.</p>
+        <a href="#buchung" class="btn">Call buchen</a>
+    </header>
+
+    <main>
+        <section id="leistungen">
+            <h2>Unsere Workflows</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Social Media Automation</h3>
+                    <p>Automatisieren Sie Ihre Social-Media-Aktivitäten.</p>
+                </div>
+                <div class="card">
+                    <h3>Lead-Generierung</h3>
+                    <p>Gewinnen Sie neue Kunden durch optimierte Prozesse.</p>
+                </div>
+                <div class="card">
+                    <h3>Chatbot-Integration</h3>
+                    <p>Verbessern Sie den Kundenservice mit intelligenten Chatbots.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="buchung">
+            <h2>Call buchen</h2>
+            <form id="buchungsformular">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">E-Mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="workflow">Gewünschter Workflow:</label>
+                <select id="workflow" name="workflow">
+                    <option value="social_media">Social Media Automation</option>
+                    <option value="lead_generation">Lead-Generierung</option>
+                    <option value="chatbot_integration">Chatbot-Integration</option>
+                </select>
+
+                <button type="submit" class="btn">Anfrage senden</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Ihr Unternehmensname</p>
+    </footer>
+
+    <!-- Externe JavaScript-Datei -->
+    <script src="script.js"></script>
+</body>
+</html>
