@@ -86,6 +86,8 @@ form .btn {
     background-color: #4CAF50;
     color: #fff;
     border: none;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 /* Footer */
