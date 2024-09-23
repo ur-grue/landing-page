@@ -22,7 +22,7 @@ document.getElementById('buchungsformular').addEventListener('submit', function(
     fetch('https://api.airtable.com/v0/YOUR_BASE_ID/Anfragen', {
         method: 'POST',
         headers: {
-            'Authorization': 'pataLQThLzkfWDqqk.6f4f75caa52f80c0cc22589c5fe35de68f55a91478867fd7a4a710b578b1a957',
+            'Authorization': 'Bearer YOUR_PERSONAL_ACCESS_TOKEN',
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(data)
@@ -32,7 +32,10 @@ document.getElementById('buchungsformular').addEventListener('submit', function(
             alert('Vielen Dank für Ihre Anfrage! Wir werden uns bald bei Ihnen melden.');
             document.getElementById('buchungsformular').reset();
         } else {
-            alert('Es gab ein Problem mit Ihrer Anfrage.');
+            response.json().then(function(error) {
+                console.error('Fehler:', error);
+                alert('Es gab ein Problem mit Ihrer Anfrage.');
+            });
         }
     })
     .catch(function(error) {
