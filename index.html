@@ -1,64 +1,299 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>KI-gestützte Workflow-Automatisierung</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Externe CSS-Datei -->
+    <title>autopunk — AI skills for media producers</title>
+    <meta name="description" content="140 free prompts for TV, journalism, podcasts, radio, and more. Pick a skill, paste it into Claude, get professional-grade output. No coding, no sign-up.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Optimieren Sie Ihre Prozesse mit KI</h1>
-        <p>Erstellen Sie individuelle Workflows für Social Media, Lead-Generierung und mehr.</p>
-        <a href="#buchung" class="btn">Call buchen</a>
-    </header>
 
-    <main>
-        <section id="leistungen">
-            <h2>Unsere Workflows</h2>
-            <div class="cards">
-                <div class="card">
-                    <h3>Social Media Automation</h3>
-                    <p>Automatisieren Sie Ihre Social-Media-Aktivitäten.</p>
+<!-- ===================== NAVBAR ===================== -->
+<nav class="navbar">
+    <div class="container navbar__inner">
+        <a href="#" class="navbar__logo" aria-label="autopunk home">
+            <svg width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="3" y="3" width="94" height="94" rx="4" stroke="#E53935" stroke-width="6"/>
+                <path d="M50 8 L53 18 L58 13 L55 23 L60 20 L56 28 L50 22 L44 28 L40 20 L45 23 L42 13 L47 18 Z" fill="#E53935"/>
+                <path d="M62 15 L64 21 L67 18 L65 24 L68 22 L66 27 L62 23 L58 27 L56 22 L59 24 L57 18 L60 21 Z" fill="#E53935" transform="scale(0.6) translate(60, 10)"/>
+            </svg>
+            <span class="navbar__wordmark">auto<span class="text-red">punk</span></span>
+        </a>
+        <button class="navbar__toggle" aria-label="Toggle menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="navbar__menu">
+            <a href="#skills" class="navbar__link">Skills Library</a>
+            <a href="#services" class="navbar__link">Services</a>
+            <a href="#use-cases" class="navbar__link">Use Cases</a>
+            <a href="https://github.com/autopunk" class="navbar__link" target="_blank" rel="noopener">Github</a>
+            <a href="#early-access" class="btn btn--primary btn--sm">Get early access</a>
+        </div>
+    </div>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+    <div class="hero__gradient"></div>
+    <!-- Sparkle decorations -->
+    <svg class="sparkle sparkle--1" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5L12 0Z" fill="#E53935"/></svg>
+    <svg class="sparkle sparkle--2" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5L12 0Z" fill="#E53935"/></svg>
+    <svg class="sparkle sparkle--3" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5L12 0Z" fill="#E53935"/></svg>
+    <svg class="sparkle sparkle--4" width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5L12 0Z" fill="#E53935"/></svg>
+    <svg class="sparkle sparkle--5" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5L12 0Z" fill="#E53935"/></svg>
+
+    <div class="container hero__inner">
+        <div class="hero__content">
+            <h1 class="hero__title">ai skills for media producers &mdash; get back 40% of your day.</h1>
+            <p class="hero__subtitle">140 free prompts for TV, journalism, podcasts, radio, and more. Pick a skill, paste it into Claude, get professional-grade output. No coding, no sign-up.</p>
+            <div class="hero__actions">
+                <a href="#skills" class="btn btn--primary">Get the skills</a>
+                <a href="#services" class="btn btn--ghost">Join the waitlist &rarr;</a>
+            </div>
+        </div>
+        <div class="hero__demo">
+            <div class="demo-card">
+                <div class="demo-card__header">
+                    <div class="demo-card__icon">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect width="16" height="16" rx="3" fill="#E53935"/><path d="M4 8h8M8 4v8" stroke="#fff" stroke-width="1.5"/></svg>
+                    </div>
+                    <span class="demo-card__title">Treatment Writer</span>
+                    <button class="demo-card__close" aria-label="Close">&times;</button>
                 </div>
-                <div class="card">
-                    <h3>Lead-Generierung</h3>
-                    <p>Gewinnen Sie neue Kunden durch optimierte Prozesse.</p>
-                </div>
-                <div class="card">
-                    <h3>Chatbot-Integration</h3>
-                    <p>Verbessern Sie den Kundenservice mit intelligenten Chatbots.</p>
+                <div class="demo-card__body">
+                    <div class="demo-card__field">
+                        <label>Input</label>
+                        <div class="demo-card__input">
+                            <p>Beautiful cinematography and a spiritual reflection on legacy. Subjects include a retired dancer in rural Norway, her estranged daughter, and the abandoned studio where they once danced. Film style references: Tarkovsky, Malick. Distribution plan: European festival circuit, then streaming.</p>
+                        </div>
+                    </div>
+                    <div class="demo-card__field">
+                        <label>Output</label>
+                        <div class="demo-card__output">
+                            <p>Interweaving archival practice footage with present-day landscapes, the film captures two women circling the same questions about inheritance — what we carry in our bodies, what we leave behind in spaces.</p>
+                            <p class="demo-card__output-fade">Treatment opens with the dancer's hands. Her fingers trace the barre, muscle memory still intact. Cut to her daughter in the city, watching old footage on a laptop...</p>
+                        </div>
+                    </div>
+                    <button class="btn btn--primary btn--full">Send to Claude</button>
+                    <div class="demo-card__progress">
+                        <span>Progress</span>
+                        <div class="progress-bar"><div class="progress-bar__fill" style="width: 86%"></div></div>
+                        <span>86%</span>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 
-        <section id="buchung">
-            <h2>Call buchen</h2>
-            <form id="buchungsformular">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+<!-- ===================== SOCIAL PROOF ===================== -->
+<section class="social-proof">
+    <div class="container social-proof__inner">
+        <span class="social-proof__label">Used by teams at</span>
+        <div class="social-proof__logos">
+            <div class="social-proof__logo">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M2 2h24v24H2z" fill="none"/><path d="M14 4L6 14h6v10l8-10h-6V4z" fill="#fff"/></svg>
+                <span>Channel 4</span>
+            </div>
+            <span class="social-proof__dot">&middot;</span>
+            <div class="social-proof__logo">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="10" stroke="#fff" stroke-width="2" fill="none"/><circle cx="14" cy="14" r="4" fill="#fff"/></svg>
+                <span>Reuters</span>
+            </div>
+            <span class="social-proof__dot">&middot;</span>
+            <div class="social-proof__logo">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M2 4l8 6 8-6v12H2V4z" fill="#fff"/></svg>
+                <span>Vice Media</span>
+            </div>
+        </div>
+    </div>
+</section>
 
-                <label for="email">E-Mail:</label>
-                <input type="email" id="email" name="email" required>
+<!-- ===================== STATS ===================== -->
+<section class="stats" id="use-cases">
+    <div class="container">
+        <h2 class="stats__title">you're spending 40% of your day on tasks AI can do in minutes</h2>
+        <div class="stats__grid">
+            <div class="stat-card">
+                <div class="stat-card__icon">
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="12" stroke="#E53935" stroke-width="2"/><path d="M14 8v6l4 4" stroke="#E53935" stroke-width="2" stroke-linecap="round"/></svg>
+                </div>
+                <div class="stat-card__value">3-4h</div>
+                <div class="stat-card__label">lost to first-draft admin</div>
+                <p class="stat-card__desc">3-4h lost to first-draft research, planning, formatting. 3-4h lost to first-draft minutes.</p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-card__icon">
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M4 20L10 14L16 18L24 8" stroke="#E53935" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 8h6v6" stroke="#E53935" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div class="stat-card__value">73%</div>
+                <div class="stat-card__label">of media teams have no AI workflow</div>
+                <p class="stat-card__desc">Media teams have no AI workflow. Contentious and solutions poorly and haphazardly adopted.</p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-card__icon">
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 4v20M8 14l6-6 6 6" stroke="#E53935" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div class="stat-card__value">11x</div>
+                <div class="stat-card__label">Faster with the right AI skill</div>
+                <p class="stat-card__desc">Faster with most mastering the right AI skill from a strategic and relevant over-experimentation.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-                <label for="workflow">Gewünschter Workflow:</label>
-                <select id="workflow" name="workflow">
-                    <option value="Social Media Automation">Social Media Automation</option>
-                    <option value="Lead-Generierung">Lead-Generierung</option>
-                    <option value="Chatbot-Integration">Chatbot-Integration</option>
-                </select>
+<!-- ===================== TESTIMONIALS ===================== -->
+<section class="testimonials">
+    <div class="container">
+        <h2 class="testimonials__title">Before. After. Hours saved.</h2>
+        <div class="testimonials__carousel-wrapper">
+            <button class="testimonials__arrow testimonials__arrow--left" aria-label="Previous">&lsaquo;</button>
+            <div class="testimonials__carousel">
+                <div class="testimonials__track">
+                    <div class="testimonial-card">
+                        <div class="testimonial-card__badge testimonial-card__badge--before">Before</div>
+                        <div class="testimonial-card__user">
+                            <div class="testimonial-card__avatar"></div>
+                            <div>
+                                <div class="testimonial-card__name">Sarah K.</div>
+                                <div class="testimonial-card__role">TV Documentary Producer</div>
+                            </div>
+                        </div>
+                        <blockquote class="testimonial-card__quote">&ldquo;Sarah K, TV Documentary: Spending hours researching, writing treatments and scripts, preparing and writing in long-form, formatting, structuring for every proposal. Each pitch deck lost to committee.&rdquo;</blockquote>
+                        <div class="testimonial-card__meta">
+                            <span class="testimonial-card__skills">Skills Used</span>
+                            <span>TV Producer &middot; 4 hours ago</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-card__badge testimonial-card__badge--after">After</div>
+                        <div class="testimonial-card__user">
+                            <div class="testimonial-card__avatar"></div>
+                            <div>
+                                <div class="testimonial-card__name">Larry J. Roother</div>
+                                <div class="testimonial-card__role">TV Documentary Producer</div>
+                            </div>
+                        </div>
+                        <blockquote class="testimonial-card__quote">&ldquo;I hate old processes as an argument with a warbling media ecosystem. Now, with more exam-style front and over 640 hours time's saving, 400 mins. Hours saved.&rdquo;</blockquote>
+                        <div class="testimonial-card__meta">
+                            <span class="testimonial-card__skills">Skills Used</span>
+                            <span>TV Documentaries &middot; 21 mins ago</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-card__badge testimonial-card__badge--before">Before</div>
+                        <div class="testimonial-card__user">
+                            <div class="testimonial-card__avatar"></div>
+                            <div>
+                                <div class="testimonial-card__name">Sarah K.</div>
+                                <div class="testimonial-card__role">TV Documentary Producer</div>
+                            </div>
+                        </div>
+                        <blockquote class="testimonial-card__quote">&ldquo;Monotonous production workflow: unworkable paperwork/documents, manual edits and footage searching, wasting hours on the most basic production admin tasks.&rdquo;</blockquote>
+                        <div class="testimonial-card__meta">
+                            <span class="testimonial-card__skills">Skills Used</span>
+                            <span>TV Documentary &middot; 40 min</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="testimonials__arrow testimonials__arrow--right" aria-label="Next">&rsaquo;</button>
+        </div>
+        <div class="testimonials__dots">
+            <button class="testimonials__dot active" aria-label="Slide 1"></button>
+            <button class="testimonials__dot" aria-label="Slide 2"></button>
+            <button class="testimonials__dot" aria-label="Slide 3"></button>
+        </div>
+    </div>
+</section>
 
-                <button type="submit" class="btn">Anfrage senden</button>
-            </form>
-        </section>
-    </main>
+<!-- ===================== FEATURES (Two-Column) ===================== -->
+<section class="features" id="skills">
+    <div class="container features__grid">
+        <!-- Skills Library -->
+        <div class="features__col">
+            <span class="features__eyebrow">Skills Library</span>
+            <h2 class="features__heading">140 AI skills. No cost. No login.</h2>
+            <p class="features__desc">140 free prompts media format in DM Sans.</p>
+            <div class="skills-grid">
+                <a href="#" class="skill-tag"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect width="16" height="16" rx="3" fill="#E53935"/><rect x="3" y="5" width="10" height="6" rx="1" fill="#111"/></svg> TV Documentary</a>
+                <a href="#" class="skill-tag"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect width="16" height="16" rx="3" fill="#E53935"/><path d="M4 4h8v8H4z" fill="#111"/></svg> Magazine Journalism</a>
+                <a href="#" class="skill-tag"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect width="16" height="16" rx="3" fill="#E53935"/><path d="M8 4l4 8H4l4-8z" fill="#111"/></svg> YouTube Creators</a>
+                <a href="#" class="skill-tag"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect width="16" height="16" rx="3" fill="#E53935"/><circle cx="8" cy="8" r="4" fill="#111"/></svg> Podcast Producers</a>
+                <a href="#" class="skill-tag"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect width="16" height="16" rx="3" fill="#E53935"/><path d="M8 3v10M5 6v4M11 5v6" stroke="#111" stroke-width="1.5" stroke-linecap="round"/></svg> Radio &amp; Audio</a>
+                <a href="#" class="skill-tag"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect width="16" height="16" rx="3" fill="#E53935"/><path d="M4 5h8M4 8h5M4 11h7" stroke="#111" stroke-width="1.5" stroke-linecap="round"/></svg> TV Screenwriting</a>
+                <a href="#" class="skill-tag"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect width="16" height="16" rx="3" fill="#E53935"/><rect x="3" y="3" width="10" height="10" rx="1" stroke="#111" stroke-width="1.5" fill="none"/></svg> Newsletter Writers</a>
+                <a href="#" class="skill-tag"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect width="16" height="16" rx="3" fill="#E53935"/><path d="M5 8h6M8 5v6" stroke="#111" stroke-width="1.5" stroke-linecap="round"/></svg> PR &amp; Comms</a>
+                <a href="#" class="skill-tag"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect width="16" height="16" rx="3" fill="#E53935"/><path d="M4 12l3-4 2 2 3-4" stroke="#111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> PR &amp; Comms</a>
+                <a href="#" class="skill-tag"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect width="16" height="16" rx="3" fill="#E53935"/><path d="M4 4h3v3H4zM9 4h3v3H9zM4 9h3v3H4zM9 9h3v3H9z" fill="#111"/></svg> Data Journalism</a>
+                <a href="#" class="skill-tag"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect width="16" height="16" rx="3" fill="#E53935"/><circle cx="8" cy="8" r="3" stroke="#111" stroke-width="1.5" fill="none"/><path d="M8 3v2M8 11v2M3 8h2M11 8h2" stroke="#111" stroke-width="1.5" stroke-linecap="round"/></svg> Image Prompting</a>
+                <a href="#" class="skill-tag"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect width="16" height="16" rx="3" fill="#E53935"/><path d="M6 4h4l2 3-4 6-4-6 2-3z" fill="#111"/></svg> Social Media</a>
+            </div>
+        </div>
 
-    <footer>
-        <p>&copy; 2023 Ihr Unternehmensname</p>
-    </footer>
+        <!-- Pipeline Integration -->
+        <div class="features__col" id="services">
+            <span class="features__eyebrow">Pipeline Integration</span>
+            <h2 class="features__heading">Skip the setup. We build it into your workflow.</h2>
+            <div class="pipeline-steps">
+                <div class="pipeline-step">
+                    <span class="pipeline-step__number">01</span>
+                    <h3 class="pipeline-step__title">Audit</h3>
+                    <p class="pipeline-step__desc">Audit and assess process understanding and service requirements.</p>
+                </div>
+                <div class="pipeline-step">
+                    <span class="pipeline-step__number">02</span>
+                    <h3 class="pipeline-step__title">Build</h3>
+                    <p class="pipeline-step__desc">Build your bespoke and production-ready techniques and testing workflows.</p>
+                </div>
+                <div class="pipeline-step">
+                    <span class="pipeline-step__number">03</span>
+                    <h3 class="pipeline-step__title">Deploy</h3>
+                    <p class="pipeline-step__desc">The bespoke 3 steps: connection/friction and connected deployment process.</p>
+                </div>
+            </div>
+            <a href="#" class="btn btn--outline">Book a free discovery call &rarr;</a>
+        </div>
+    </div>
+</section>
 
-    <!-- Externe JavaScript-Datei -->
-    <script src="script.js"></script>
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer" id="early-access">
+    <div class="container footer__inner">
+        <div class="footer__brand">
+            <div class="footer__logo">
+                <span class="navbar__wordmark">auto<span class="text-red">punk</span></span>
+            </div>
+            <div class="footer__contact">
+                <a href="mailto:autopunk@autopunk.com">autopunk@autopunk.com</a>
+                <span>tele 468-585-4300</span>
+            </div>
+        </div>
+        <div class="footer__links">
+            <a href="#skills">Skills</a>
+            <a href="#services">Service</a>
+            <a href="#use-cases">Use Cases</a>
+            <a href="https://github.com/autopunk" target="_blank" rel="noopener">Github</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+    <div class="container footer__bottom">
+        <span>Copyright &copy; 2025 autopunk</span>
+        <div class="footer__legal">
+            <a href="#">Privacy</a>
+            <span>&middot;</span>
+            <a href="#">Privacy</a>
+        </div>
+    </div>
+    <!-- Footer sparkles -->
+    <svg class="sparkle sparkle--footer-1" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5L12 0Z" fill="#E53935"/></svg>
+    <svg class="sparkle sparkle--footer-2" width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5L12 0Z" fill="#E53935"/></svg>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
